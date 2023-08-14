@@ -62,7 +62,8 @@ def get_weather(message, lat , lon):
         f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={open_weather_token}&units=metric&lang=ru"
     )
     data1 = r.json()
-    time_zone = (25200 - data1["timezone"])
+    # print(data1)
+    time_zone = (10800 - data1["timezone"]) #сменить потом на 25200 (Новосибирский пояс)
 
     code_to_smile = {
         "Clear": "Ясно \U00002600",
